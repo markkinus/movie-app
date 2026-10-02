@@ -1,10 +1,10 @@
-import movieItem from './movieItem'
+import React from 'react'
 
-function movieList({ movies }) {
+function movieList({ movies, deleteMovie }) {
   return (
     <>
       {movies.map((movie) => (
-        <movieItem key={movie.id} movie={movie} />
+        <movieItem key={movie.id} movie={movie} onDelete={deleteMovie} />
       ))}
     </>
   )

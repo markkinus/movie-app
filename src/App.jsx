@@ -44,6 +44,12 @@ function App() {
     setTitle("")
     setYear("")
   }
+
+  function deleteMovie(id) {
+    const updatedMovies = movies.filter((movie) => movie.id !== id)
+
+    setmovies(updatedMovies)
+  }
   return (
     <>
       <h1>Movie List</h1>
@@ -61,7 +67,7 @@ function App() {
       onChange={(e) => setYear(e.target.value)}
       />
       <button onClick={addMovie}>Add Movie</button>
-      <movieList movies={movies} />
+      <MovieList movies={movies} onDelete={deleteMovie} />
       </>
   )
 }
