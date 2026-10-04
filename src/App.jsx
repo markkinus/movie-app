@@ -52,21 +52,23 @@ function App() {
   }
   return (
     <>
-      <h1>Movie List</h1>
+      <h1 className="text-3xl font-bold underline">Movie List</h1>
 
       <input
       type="text"
       placeholder="Movie Title"
       value={title}
       onChange={(e) => setTitle(e.target.value)}
+      className ="border border-gray-300 rounded-md p-2 mb-4"
       />
       <input
       type="number"
       placeholder="Release Year"
       value={year}
       onChange={(e) => setYear(e.target.value)}
+      className ="border border-gray-300 rounded-md p-2 mb-4"
       />
-      <button onClick={addMovie}>Add Movie</button>
+      <button onClick={addMovie}className ="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Add Movie</button>
       <MovieList movies={movies} deleteMovie={deleteMovie} />
     </>
   )
