@@ -1,13 +1,18 @@
 import React from 'react'
+import MovieItem from './movieItem'
 
-function movieList({ movies, deleteMovie }) {
+function MovieList({ movies, deleteMovie }) {
   return (
     <>
       {movies.map((movie) => (
-        <movieItem key={movie.id} movie={movie} onDelete={deleteMovie} />
+        <MovieItem
+         key={movie.id} 
+         movie={movie} 
+         deleteMovie={deleteMovie} 
+         />
       ))}
     </>
   )
 }
 
-export default movieList
+export default MovieList

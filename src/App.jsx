@@ -1,5 +1,5 @@
 import { useState} from 'react'
-import MovieList from './components/movieList'
+import MovieList from './components/MovieList'
 
 function App() {
   const [movies, setmovies] = useState([
@@ -67,8 +67,8 @@ function App() {
       onChange={(e) => setYear(e.target.value)}
       />
       <button onClick={addMovie}>Add Movie</button>
-      <MovieList movies={movies} onDelete={deleteMovie} />
-      </>
+      <MovieList movies={movies} deleteMovie={deleteMovie} />
+    </>
   )
 }
 
