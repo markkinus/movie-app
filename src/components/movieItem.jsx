@@ -1,12 +1,13 @@
 import React from 'react'
 
-function movieItem({movie}) {
+function MovieItem({ movie, deleteMovie }) {
   return (
     <>
         <h2>{movie.title}</h2>
         <p>{movie.year}</p>
+        <button onClick={() => deleteMovie(movie.id)}>Delete</button>
     </>
   )
 }
 
-export default movieItem
+export default MovieItem
